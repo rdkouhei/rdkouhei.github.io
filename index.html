@@ -1,60 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>rdkouhei - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>rdkouhei</h1>
-            <nav aria-label="Main Navigation">
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">rdkouhei<span class="cursor">_</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>This is rdkouhei homepage.</p>
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">rdkouhei</h1>
+            <p class="hero-tagline">Robotics & AI Engineer</p>
+            <div class="hero-cta">
+                <a href="#about" class="btn btn-primary">About Me</a>
+                <a href="https://github.com/rdkouhei" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
             </div>
-        </section>
+        </div>
+        <div class="hero-visual">
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <pre class="code-content"><code><span class="kw">class</span> <span class="cls">Engineer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(self):
+        self.name = <span class="str">"rdkouhei"</span>
+        self.skills = [
+            <span class="str">"Python"</span>, <span class="str">"C++"</span>,
+            <span class="str">"Machine Learning"</span>,
+            <span class="str">"Robotics"</span>, <span class="str">"ROS"</span>
+        ]
 
-        <section id="skills" class="section">
-            <div class="container">
-                <h2>Skills</h2>
-                <ul class="skills-list">
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>Machine Learning</li>
-                    <li>Robot Application</li>
-                    <li>ROS</li>
-                </ul>
+    <span class="kw">def</span> <span class="fn">build</span>(self):
+        <span class="kw">return</span> <span class="str">"something awesome"</span></code></pre>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Feel free to reach out through the following link:</p>
-                <p><a href="https://github.com/rdkouhei" target="_blank">GitHub Profile</a></p>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">//</span> About Me</h2>
+            <div class="about-content">
+                <p>ロボティクスとAIに情熱を持つエンジニアです。機械学習やロボットアプリケーション開発を通じて、テクノロジーの可能性を追求しています。</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">//</span> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">&#x1F40D;</div>
+                    <h3>Python</h3>
+                    <p>データ分析、機械学習、自動化スクリプト開発</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#x2699;</div>
+                    <h3>C++</h3>
+                    <p>高性能アプリケーション、組み込みシステム開発</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#x1F9E0;</div>
+                    <h3>Machine Learning</h3>
+                    <p>深層学習モデルの設計・学習・デプロイ</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#x1F916;</div>
+                    <h3>Robotics</h3>
+                    <p>ロボットアプリケーションの設計と実装</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#x1F4E1;</div>
+                    <h3>ROS</h3>
+                    <p>Robot Operating System を用いたシステム構築</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">//</span> Contact</h2>
+            <div class="contact-content">
+                <p>お気軽にご連絡ください。</p>
+                <div class="contact-links">
+                    <a href="https://github.com/rdkouhei" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 My Portfolio</p>
+            <p>&copy; 2024-2026 rdkouhei. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-title, .about-content, .skill-card, .contact-content').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+
+        // Blinking cursor animation
+        const cursor = document.querySelector('.cursor');
+        setInterval(() => cursor.classList.toggle('blink-off'), 530);
+    </script>
 </body>
 </html>
